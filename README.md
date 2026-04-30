@@ -1,105 +1,103 @@
 # Pulse AI Workplace
 
-Pulse is an editor-native operating system for AI-assisted software work. It is
-not a task list, a chat wrapper, or a static project dashboard. Pulse is built to
-run the workday: assign agents, keep the board truthful, preserve evidence, route
-reviews, and move launch work through proof-backed gates.
+Pulse is an editor-native command center for teams working with AI agents.
 
-The product source is proprietary. This public repository exists so developers
-can understand what Pulse does and find the canonical public surfaces without
-exposing private implementation history.
+It brings the workday, task board, agent dispatch, review evidence, project
+memory, and launch gates into one operating surface so agentic software work can
+move with speed without losing accountability.
 
-## What Pulse Does
+## Why Pulse Exists
 
-Pulse coordinates the full loop of agentic product work:
+AI agents can write code, open terminals, run checks, and move fast. The hard
+part is not starting more agent work. The hard part is knowing what is running,
+what changed, what was verified, what is blocked, and what is actually ready to
+ship.
 
-- **Plan the work** with action items, priorities, dependencies, sprint context,
-  launch pillars, due dates, owners, and review states.
-- **Run the workday** from one command surface that shows queue pressure, active
-  sessions, blockers, review load, and launch readiness.
-- **Dispatch agents** through role selection, skill loading, pool rules,
-  validation expectations, and git receipts.
-- **Capture proof** with build output, runtime evidence, screenshots, review
-  notes, presentations, narration, and source-truth links.
-- **Preserve memory** through Knowledge Items that keep decisions, artifacts,
-  research, and prior remediation available to the next agent.
-- **Ship through gates** that connect product readiness, website readiness,
-  billing, support, legal, docs, listing, and launch content.
+Pulse is built for that operating layer.
 
-## Core Surfaces
+## What You Can Do With Pulse
 
-### Workday
+### Run the Workday
 
-Workday is the operator surface. It answers: what is running, what is blocked,
-what needs review, what is next, and whether the launch room has enough pressure
-on the right work.
+Start from a live workday view instead of scattered terminal sessions.
 
-Typical Workday state includes:
+Pulse shows active work, queued work, blocked items, review load, and launch
+pressure in one place. The goal is to make the current state of the day obvious:
+what needs attention, what can move next, and what should not be considered done
+yet.
 
-- active dispatch slots
-- queued and blocked items
-- review-ready tasks
-- current sprint focus
-- launch blockers
-- daily operating notes
+### Manage the Action Board
 
-### Action Board
+Pulse board items carry the context agents need to work responsibly:
 
-The board is the source of truth for work state. Items carry more than titles:
-owner, priority, dependencies, timestamps, validation notes, deliverable links,
-review status, and completion evidence.
+- owner and role expectations
+- priority and sprint context
+- dependencies and blockers
+- acceptance criteria
+- validation notes
+- review status
+- completion evidence
 
-Pulse treats board state as operational truth, not decoration. If a task says it
-is done, the evidence has to agree.
+The board is designed to keep work state honest as tasks move from todo to
+in-progress, review, and done.
 
-### Dispatch System
+### Dispatch AI Agents
 
-Dispatch turns work into accountable agent execution. Agents are expected to
-adopt roles, load relevant skills, read prior context, inspect source state,
-make narrow changes, validate them, commit, push, and leave a receipt.
+Pulse gives agent work a structure:
 
-Dispatch exists so agent work does not disappear into terminal history.
+- choose the right role for the job
+- load the relevant operating skills
+- read prior context before acting
+- make narrow changes
+- run validation
+- commit and push work
+- leave a useful receipt for review
 
-### Roles and Skills
+That structure helps teams use agents as accountable contributors instead of
+untracked background activity.
 
-Pulse uses roles and skills to keep work bounded:
+### Review With Evidence
 
-- product roles define judgment and scope
-- engineering roles define implementation responsibility
-- review roles define approval standards
-- skills encode repeatable workflows, quality bars, and known failure modes
+Pulse treats review as a proof step, not a vibe check.
 
-This is how Pulse prevents every agent from acting like a generic coding helper.
+Reviewers can inspect what changed, which checks ran, what runtime evidence was
+captured, what risks remain, and whether the task state matches the actual
+source state.
 
-### Knowledge Base
+### Preserve Project Memory
 
-Knowledge Items preserve the project memory that usually gets lost between
-sessions. They hold research, launch decisions, audit results, presentations,
-narration, screenshots, validation output, and remediation notes.
+Pulse keeps decisions, research, screenshots, validation output, review notes,
+presentations, and narration close to the work that produced them.
 
-The goal is simple: the next agent should not have to rediscover what the last
-agent already proved.
+That gives future agents and teammates a durable trail: what was decided, why it
+changed, and what proof existed at the time.
 
-### Review and Proof Gates
+### Track Launch Readiness
 
-Pulse review is evidence-based. A reviewer checks the actual diff, source state,
-runtime behavior, acceptance criteria, regressions, missing tests, and whether
-the board and Knowledge Item agree with reality.
-
-Approval is not a rubber stamp. It is a release-control step.
-
-### Launch Operations
-
-Pulse tracks launch readiness across the real surfaces that matter:
+Pulse is especially useful when a launch has many moving parts:
 
 - extension runtime
 - website and docs
 - billing and account flows
 - support and legal pages
-- Marketplace/listing readiness
+- release notes and changelog
+- product listing readiness
 - content packages
-- changelog/status/release notes
-- evidence that each claim is live, current, and supportable
+- final launch gates
+
+Instead of treating each surface as a separate checklist, Pulse keeps the
+readiness story connected.
+
+## Product Surfaces
+
+| Surface | What it is for |
+| --- | --- |
+| Workday | The live operating room for the day’s AI-agent work. |
+| Action Board | The source of truth for task state, blockers, owners, and review. |
+| Dispatch | The system for assigning agent work through roles, skills, and receipts. |
+| Knowledge | The memory layer for proof, research, decisions, and artifacts. |
+| Review | The gate that checks diffs, behavior, evidence, and release risk. |
+| Launch | The readiness layer for shipping across product, site, docs, support, and billing. |
 
 ## Public Links
 
@@ -110,26 +108,14 @@ Pulse tracks launch readiness across the real surfaces that matter:
 - Contact: https://pulse-ai.dev/contact
 - Privacy: https://pulse-ai.dev/privacy
 - Terms: https://pulse-ai.dev/terms
-- Support email: support@pulse-ai.dev
+- Support: support@pulse-ai.dev
 
-## Extension Listing
+## Availability
 
-The public Marketplace link is intentionally withheld until the live listing URL
-is verified. Pulse will not publish or repeat an inferred Marketplace URL from
-package metadata or internal release artifacts.
+Pulse AI Workplace is currently presented through the official Pulse website and
+documentation. Public install links will be added only when the live listing is
+ready and verified.
 
-## Repository Scope
+## License
 
-This repository contains only the static GitHub Pages site for the public
-developer doorway:
-
-- `index.html`
-- `styles.css`
-- public-facing image assets
-
-It does not contain the Pulse product source code, board data, launch records,
-private Knowledge Items, customer data, or operational history.
-
-## Ownership
-
-Pulse AI Workplace is proprietary software by IZA NOIR LLC.
+Pulse AI Workplace is proprietary software by IZA NOIR LLC. All rights reserved.
