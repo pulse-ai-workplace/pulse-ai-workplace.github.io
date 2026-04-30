@@ -3,212 +3,188 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pulse AI Workplace</title>
+    <title>Pulse for Developers</title>
     <meta
       name="description"
-      content="Pulse is the AI workday command center for agentic software teams: Workday, dispatch, board state, review proof, knowledge, roles, and launch gates in one editor-native operating surface."
+      content="Pulse is AI workforce management inside VS Code: model roles, dispatch agents, run checks, and keep review proof attached to the work."
     >
-    <meta property="og:title" content="Pulse AI Workplace">
-    <meta
-      property="og:description"
-      content="Run the AI workday from one live operating surface."
-    >
+    <meta property="og:title" content="Pulse for Developers">
+    <meta property="og:description" content="AI workforce management inside VS Code.">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#101112">
+    <meta name="theme-color" content="#030303">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header" aria-label="Primary">
-      <a class="brand" href="https://pulse-ai.dev" aria-label="Pulse AI home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>Pulse AI</span>
+    <div class="page-grid" aria-hidden="true"></div>
+    <header class="topbar" aria-label="Primary">
+      <a class="brand" href="https://pulse-ai.dev" aria-label="Pulse home">
+        <svg viewBox="0 0 42 24" aria-hidden="true">
+          <path d="M1 12h5l3-9 5 18 5-15 4 12 3-6h5l3-6 4 12h3" />
+        </svg>
+        <span>Pulse</span>
       </a>
       <nav class="nav-links" aria-label="Main links">
-        <a href="#workday">Workday</a>
-        <a href="#dispatch">Dispatch</a>
-        <a href="#proof">Proof</a>
-        <a href="#features">Features</a>
-        <a href="https://pulse-ai.dev">pulse-ai.dev</a>
+        <a href="https://pulse-ai.dev/docs">Docs</a>
+        <a href="#install">Marketplace</a>
+        <a href="https://pulse-ai.dev/help">Support</a>
+        <a href="https://pulse-ai.dev/privacy">Legal</a>
       </nav>
+      <div class="utility" aria-label="Keyboard shortcuts">
+        <span class="key">⌘</span>
+        <span class="key">K</span>
+        <span class="divider"></span>
+        <span class="theme-key" aria-hidden="true">☼</span>
+      </div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <div class="gridline gridline-left" aria-hidden="true"></div>
-        <div class="gridline gridline-right" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow">Pulse AI Workplace</p>
-          <h1 id="hero-title">Run the AI workday from one live operating surface.</h1>
-          <p class="lede">
-            Pulse brings board state, agent dispatch, review proof, knowledge,
-            roles, skills, and launch readiness into the editor workflow so AI
-            agent work can be assigned, supervised, verified, and shipped.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="primary-action" href="https://pulse-ai.dev">Open Pulse home</a>
-            <a class="secondary-action" href="https://pulse-ai.dev/docs">Read docs</a>
+          <h1 id="hero-title">Pulse for Developers</h1>
+          <div class="gold-rule"></div>
+          <p>AI workforce management inside VS Code.</p>
+          <div class="hero-actions">
+            <a class="command-button primary" href="https://pulse-ai.dev/docs">
+              <span aria-hidden="true">⌄</span>
+              <strong>Install on VS Code Marketplace</strong>
+              <kbd>⌘ I</kbd>
+            </a>
+            <a class="command-button" href="https://pulse-ai.dev/docs">
+              <span aria-hidden="true">▱</span>
+              <strong>Read docs</strong>
+            </a>
+            <a class="command-button" href="https://pulse-ai.dev/help">
+              <span aria-hidden="true">◎</span>
+              <strong>Support</strong>
+            </a>
           </div>
         </div>
 
-        <div class="operator-preview" aria-label="Rendered Pulse Workday preview">
-          <div class="preview-topbar">
-            <span class="traffic-dot"></span>
-            <span class="traffic-dot"></span>
-            <span class="traffic-dot"></span>
-            <strong>Pulse Workday</strong>
-          </div>
-          <div class="preview-body">
-            <aside class="preview-rail" aria-hidden="true">
-              <span class="rail-active"></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </aside>
-            <section class="preview-main">
-              <div class="preview-heading">
-                <span class="mono">Current workday</span>
-                <h2>Launch operations</h2>
+        <section class="product-shell" aria-label="Pulse product dashboard preview">
+          <aside class="sidebar">
+            <div class="mini-brand">
+              <span class="doc-icon">▧</span>
+              <span>⌁ Pulse</span>
+            </div>
+            <nav aria-label="Product preview navigation">
+              <a class="active" href="#board"><span>▣</span>Board</a>
+              <a href="#roles"><span>♧</span>Roles</a>
+              <a href="#sprint"><span>◴</span>Sprint</a>
+              <a href="#checks"><span>✓</span>Checks</a>
+              <a href="#review"><span>×</span>Review</a>
+              <a href="#workday"><span>◷</span>Workday</a>
+            </nav>
+            <div class="sidebar-footer">
+              <div class="sidebar-icons"><span>⚙</span><span>♙</span></div>
+              <p><span></span>Connected<br>v1.3.2</p>
+            </div>
+          </aside>
+
+          <div class="board-panel" id="board">
+            <div class="panel-head">
+              <h2>Board</h2>
+              <div class="panel-controls">
+                <span>▣ Sprint 24</span>
+                <span>◷ 5d left</span>
+                <span>⋮</span>
               </div>
-              <div class="metric-row">
-                <div><span>Queue</span><strong>100</strong></div>
-                <div><span>Active</span><strong>6</strong></div>
-                <div><span>Review</span><strong>18</strong></div>
-                <div><span>Blocked</span><strong>34</strong></div>
+            </div>
+
+            <div class="metrics">
+              <div>
+                <span>Workforce</span>
+                <strong>24 / 28</strong>
+                <div class="bar"><i style="width: 78%"></i></div>
               </div>
-              <div class="split-panel">
-                <article>
-                  <span class="mono">Dispatch pool</span>
-                  <h3>Agents are assigned by role, skill, and dependency.</h3>
-                  <div class="progress"><span style="width: 82%"></span></div>
-                  <p>Capacity stays visible before work drifts into hidden terminal history.</p>
-                </article>
-                <article>
-                  <span class="mono">Review gate</span>
-                  <h3>Every promoted item needs evidence.</h3>
-                  <ul>
-                    <li>Build/test proof</li>
-                    <li>Runtime screenshots</li>
-                    <li>Knowledge package</li>
-                  </ul>
-                </article>
+              <div>
+                <span>Capacity</span>
+                <strong>82%</strong>
+                <div class="ring" aria-hidden="true"></div>
               </div>
-            </section>
+              <div>
+                <span>Velocity</span>
+                <strong>42 <small>pts</small></strong>
+                <div class="spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div>
+                <span>Quality</span>
+                <strong>96%</strong>
+                <div class="ticks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+              <div>
+                <span>Risks</span>
+                <strong>3</strong>
+                <em aria-hidden="true">!</em>
+              </div>
+            </div>
+
+            <div class="task-table" aria-label="Active tasks">
+              <div class="table-head">
+                <span>Active tasks</span>
+                <a href="https://pulse-ai.dev/docs">View all</a>
+              </div>
+              <div class="row header">
+                <span>ID</span><span>Title</span><span>Role</span><span>Assignee</span><span>Status</span><span>Progress</span><span></span>
+              </div>
+              <div class="row">
+                <span>PUL-241</span><span>Implement background sync</span><span>Backend</span><span>⌁ Agent Orion</span><span>In progress</span><span><i style="width:72%"></i>72%</span><span>...</span>
+              </div>
+              <div class="row">
+                <span>PUL-238</span><span>Add retry logic to webhook</span><span>Backend</span><span>⌁ Agent Nova</span><span>In progress</span><span><i style="width:58%"></i>58%</span><span>...</span>
+              </div>
+              <div class="row">
+                <span>PUL-233</span><span>Create billing usage chart</span><span>Frontend</span><span>⌁ Agent Flux</span><span>Review</span><span><i style="width:90%"></i>90%</span><span>...</span>
+              </div>
+              <div class="row">
+                <span>PUL-229</span><span>Design roles and permissions</span><span>Product</span><span>⌁ Agent Sage</span><span>Done</span><span><i style="width:100%"></i>100%</span><span>...</span>
+              </div>
+              <div class="row">
+                <span>PUL-227</span><span>Write API contract tests</span><span>QA</span><span>⌁ Agent Veritas</span><span>Done</span><span><i style="width:100%"></i>100%</span><span>...</span>
+              </div>
+            </div>
+
+            <div class="checks" aria-label="Recent checks">
+              <div><span>✓</span>Type Safety <strong>Pass</strong><small>2m ago</small></div>
+              <div><span>✓</span>Unit Tests <strong>Pass</strong><small>3m ago</small></div>
+              <div><span>✓</span>Lint <strong>Pass</strong><small>4m ago</small></div>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
 
-      <section class="metrics-strip" aria-label="Pulse operating model">
-        <div><span class="metric-value">01</span><span class="metric-label">Workday control</span></div>
-        <div><span class="metric-value">02</span><span class="metric-label">Agent dispatch</span></div>
-        <div><span class="metric-value">03</span><span class="metric-label">Review proof</span></div>
-        <div><span class="metric-value">04</span><span class="metric-label">Launch gates</span></div>
-      </section>
-
-      <section id="workday" class="showcase" aria-labelledby="workday-title">
-        <div class="showcase-copy">
-          <span class="scene-number">01</span>
-          <p class="eyebrow">Workday</p>
-          <h2 id="workday-title">The command center for agentic execution.</h2>
-          <p>
-            Start a workday, inspect the queue, see which agents are active,
-            identify blocked work, and keep the whole launch room oriented
-            around the next highest-value item.
-          </p>
-        </div>
-        <div class="scene-card">
-          <div class="scene-header">
-            <span>Workday session</span>
-            <strong>Live pressure</strong>
-          </div>
-          <div class="timeline">
-            <div><span></span><p>Queue hydrated from board state</p></div>
-            <div><span></span><p>Dispatch pool fills available execution slots</p></div>
-            <div><span></span><p>Review gate catches missing proof before release</p></div>
-            <div><span></span><p>Launch blockers stay visible until resolved</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="dispatch" class="showcase showcase-reverse" aria-labelledby="dispatch-title">
-        <div class="showcase-copy">
-          <span class="scene-number">02</span>
-          <p class="eyebrow">Dispatch</p>
-          <h2 id="dispatch-title">Agents run through roles, skills, and receipts.</h2>
-          <p>
-            Pulse is built for managed agent work: role selection, skill loading,
-            task ownership, validation scripts, commits, pushes, review notes,
-            and status transitions stay attached to the board item.
-          </p>
-        </div>
-        <div class="dispatch-grid">
-          <article><span>Role</span><strong>Specialist owner</strong><p>Chooses the right operating frame before editing.</p></article>
-          <article><span>Skill</span><strong>Operating playbook</strong><p>Applies the quality bar, workflow, and proof expectations.</p></article>
-          <article><span>Receipt</span><strong>Commit + push</strong><p>Work is not invisible or stranded locally.</p></article>
-          <article><span>Gate</span><strong>Review-ready proof</strong><p>Completion is evidence-based and ready to inspect.</p></article>
-        </div>
-      </section>
-
-      <section id="proof" class="showcase" aria-labelledby="proof-title">
-        <div class="showcase-copy">
-          <span class="scene-number">03</span>
-          <p class="eyebrow">Proof</p>
-          <h2 id="proof-title">Knowledge and review stay beside the work.</h2>
-          <p>
-            Pulse packages the evidence trail: research, decisions, screenshots,
-            decks, narration, validation output, and reviewer feedback. The
-            result is a workspace that can remember why something shipped.
-          </p>
-        </div>
-        <div class="proof-stack">
-          <div><span>Knowledge item</span><strong>Decision context</strong></div>
-          <div><span>Deliverable</span><strong>Artifacts, notes, and validation</strong></div>
-          <div><span>Review</span><strong>Findings before approval</strong></div>
-          <div><span>Launch</span><strong>Green, yellow, red gates</strong></div>
-        </div>
-      </section>
-
-      <section id="features" class="feature-section" aria-labelledby="features-title">
-        <p class="eyebrow">Feature map</p>
-        <h2 id="features-title">What developers come here to understand.</h2>
-        <div class="feature-grid">
-          <article>
-            <span>01</span>
-            <h3>Action board</h3>
-            <p>Tasks carry status, owner, priority, dependencies, timestamps, review state, and launch context.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Workday control</h3>
-            <p>One operator surface for queue pressure, active sessions, blockers, review items, and daily launch focus.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Dispatch system</h3>
-            <p>Agent work routes through roles, skills, pool rules, validation expectations, and git receipts.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Review gates</h3>
-            <p>Reviewers inspect diffs, runtime proof, acceptance criteria, regressions, and missing tests before approval.</p>
-          </article>
-          <article>
-            <span>05</span>
-            <h3>Knowledge base</h3>
-            <p>Research, launch decisions, presentations, narration, and proof artifacts become durable project memory.</p>
-          </article>
-          <article>
-            <span>06</span>
-            <h3>Launch readiness</h3>
-            <p>Pulse tracks extension, website, docs, billing, support, legal, listing, and content readiness together.</p>
-          </article>
-        </div>
+      <section class="cards" aria-label="Developer setup cards">
+        <article id="install">
+          <div class="card-kicker"><span>01_Install</span><span>⌄</span></div>
+          <h2>Install</h2>
+          <p>Get Pulse in VS Code with one command. Stay up to date automatically.</p>
+          <div class="code-line"><code>open https://pulse-ai.dev/docs</code><button aria-label="Copy install command">▣</button></div>
+          <div class="shortcut"><kbd>⌘</kbd><kbd>⇧</kbd><kbd>P</kbd><span>Open Pulse</span></div>
+        </article>
+        <article>
+          <div class="card-kicker"><span>02_Model</span><span>□</span></div>
+          <h2>Model</h2>
+          <p>Define roles, skills, and constraints. Pulse matches work to the right agents.</p>
+          <div class="code-line multi"><code>role: backend-engineer<br>skills: ["python", "fastapi", "sql"]<br>constraints:<br>&nbsp;&nbsp;- max_wip: 2</code><button aria-label="Copy model example">▣</button></div>
+          <div class="shortcut"><kbd>⌘</kbd><kbd>⇧</kbd><kbd>M</kbd><span>Open Models</span></div>
+        </article>
+        <article>
+          <div class="card-kicker"><span>03_Issues</span><span>△</span></div>
+          <h2>Issues</h2>
+          <p>Surface problems early. Pulse runs checks and opens issues with fixes.</p>
+          <div class="code-line"><code>pulse checks run --fix</code><button aria-label="Copy checks command">▣</button></div>
+          <div class="shortcut"><kbd>⌘</kbd><kbd>⇧</kbd><kbd>C</kbd><span>Run Checks</span></div>
+        </article>
       </section>
     </main>
 
     <footer>
-      <span>Pulse AI Workplace</span>
-      <span>Proprietary product by IZA NOIR LLC</span>
+      <span>© 2026 IZA NOIR LLC. All rights reserved.</span>
+      <nav aria-label="Footer links">
+        <a href="https://pulse-ai.dev/status">Status</a>
+        <a href="https://pulse-ai.dev/privacy">Privacy</a>
+        <a href="https://pulse-ai.dev/terms">Terms</a>
+        <a href="mailto:support@pulse-ai.dev">Security</a>
+      </nav>
     </footer>
   </body>
 </html>
