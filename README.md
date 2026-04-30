@@ -58,7 +58,7 @@ untracked background activity.
 
 ### Review With Evidence
 
-Pulse treats review as a proof step, not a vibe check.
+Pulse treats review as a proof step.
 
 Reviewers can inspect what changed, which checks ran, what runtime evidence was
 captured, what risks remain, and whether the task state matches the actual
